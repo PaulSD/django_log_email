@@ -9,7 +9,7 @@ class EmailBackend(ConsoleEmailBackend):
         log_file = getattr(settings, 'EMAIL_LOG_FILE', None)
         if not isinstance(log_file, str):
             raise ImproperlyConfigured('EMAIL_LOG_FILE is invalid: %r' % log_file)
-        stream = open(log_file, 'ab')
+        stream = open(log_file, 'a')
         super(EmailBackend, self).__init__(*args, **dict(kwargs, stream=stream))
         self.backend = None
         backend_name = getattr(settings, 'EMAIL_LOG_BACKEND', None)
