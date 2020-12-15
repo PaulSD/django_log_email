@@ -13,7 +13,7 @@ Add the following to your ``requirements.txt``
 
   git+https://github.com/PaulSD/django_log_email
 
-Then add the following to your ``local_settings.py``
+Then add the following to your ``settings.py``
 
 ::
 
